@@ -1,0 +1,18 @@
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::<account_id>:role/karpenter-controller-<cluster_name>" # output "karpenter_sa_role_arn"の値
+
+clusterName: "<cluster_name>" # tfvarsで指定したクラスター名
+
+clusterEndpoint: "" # output "cluster_endpoint"の値
+
+aws:
+  defaultInstanceProfile: "KarpenterNodeInstanceProfile-<cluster_name>" # output "instance_profile_name"の値
+
+nodeSelector:
+  kubernetes.io/os: "linux"
+  workload-system: "true"
+
+replicas: 2
+
+logLevel: "info"

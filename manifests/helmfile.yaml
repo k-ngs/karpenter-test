@@ -1,0 +1,12 @@
+repositories:
+  - name: karpenter
+    url: https://charts.karpenter.sh
+
+releases:
+  - name: karpenter
+    namespace: karpenter
+    chart: karpenter/karpenter
+    version: 0.13.2
+    atomic: true
+    values:
+      - ./values.yaml
