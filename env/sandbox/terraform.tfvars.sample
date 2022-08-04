@@ -1,0 +1,13 @@
+region  = "ap-northeast-1" // 環境を構築するリージョン
+profile = "" // 使用するaws CLIのプロファイル
+
+// VPC名
+vpc_name = ""
+
+// EKSクラスター名
+cluster_name = ""
+
+// EKSクラスターにアクセスできるIAMユーザ
+map_users = [
+  "test",
+]
