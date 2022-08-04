@@ -1,5 +1,12 @@
 # karpenter-test
 
+使用ツール
+
+* Terraform
+* kubectl
+* helm
+* helmfile
+
 ## EKS構築
 
 EKS構築はTerraformを用いて行います。
